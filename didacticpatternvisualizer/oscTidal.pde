@@ -28,7 +28,7 @@ void oscEvent(OscMessage m) {
 
     if ( tidalLayer.hasKey("grid") ) {
       cycles.add( new Cycle( tidalLayer.get("grid") ) ) ;
-      if(tidalLayer.get("grid").equals("1")&&(frameCount-lastPos)*movSequenser>width) {
+      if(tidalLayer.get("grid").equals("1")&&(frameCount-lastPos)*movSequenser>width*.8) {
         lastPos = frameCount;
         println(lastPos);
       }

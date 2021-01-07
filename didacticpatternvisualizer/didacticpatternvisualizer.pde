@@ -19,7 +19,7 @@ float lastPos = 0;
 
 void setup() {
   osc = new OscP5(this, 1818);  
-  size(1280,360);
+  size(1200,360);
   //fullScreen(P3D, 2);
   alturaBar = height/connectionTotal;
   noStroke();
