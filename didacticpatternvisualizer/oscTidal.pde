@@ -28,6 +28,10 @@ void oscEvent(OscMessage m) {
 
     if ( tidalLayer.hasKey("grid") ) {
       cycles.add( new Cycle( tidalLayer.get("grid") ) ) ;
+      if(tidalLayer.get("grid").equals("1")&&(frameCount-lastPos)*movSequenser>width) {
+        lastPos = frameCount;
+        println(lastPos);
+      }
     }
     
     if ( tidalLayer.hasKey("connectionN") ) {

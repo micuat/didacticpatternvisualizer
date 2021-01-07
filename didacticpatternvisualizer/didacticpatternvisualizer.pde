@@ -14,6 +14,9 @@ float movSequenser= 5; // set grid speed (higher speed makes time wider)
 float sizeMin = 10;
 float sizeMax = 40;
 
+float xOffset = 0;
+float lastPos = 0;
+
 void setup() {
   osc = new OscP5(this, 1818);  
   size(1280,360);
@@ -32,10 +35,11 @@ void draw() {
   rect(0,0,width,height);
   fill(228);
   noStroke();
+  
   for(int y=0; y<(connectionTotal*0.5); y++ ) {
     rect(0, y*alturaBar*2, width, alturaBar);
   }
-  translate(-width+(movSequenser*frameCount)%width,0);
+  translate(0,0);
   for(int i=0; i<sounds.size() ; i++) {
     if ( sounds.get(i)!= null) { sounds.get(i).draw(); }
   }  
