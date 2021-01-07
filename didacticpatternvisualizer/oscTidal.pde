@@ -1,5 +1,5 @@
 void oscEvent(OscMessage m) {
-  //println(m);
+  println(m);
   //if (m.checkAddrPattern("/didacticpatternvisualizer")==true ) {
     StringDict tidalLayer = new StringDict();
     for (int d=0; d<m.typetag().length(); d+=2 ) {

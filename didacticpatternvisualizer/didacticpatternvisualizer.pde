@@ -10,7 +10,7 @@ float alturaBar;
 float offsetSubdivision = 40;
 
 int connectionTotal = 4; // set total tracks (Number of Tidal connections to represent)
-float movSequenser= 2; // set grid speed (higher speed makes time wider)
+float movSequenser= 5; // set grid speed (higher speed makes time wider)
 float sizeMin = 10;
 float sizeMax = 40;
 
@@ -35,6 +35,7 @@ void draw() {
   for(int y=0; y<(connectionTotal*0.5); y++ ) {
     rect(0, y*alturaBar*2, width, alturaBar);
   }
+  translate(-width+(movSequenser*frameCount)%width,0);
   for(int i=0; i<sounds.size() ; i++) {
     if ( sounds.get(i)!= null) { sounds.get(i).draw(); }
   }  
